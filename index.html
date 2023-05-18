@@ -423,6 +423,26 @@
             </li>
           </ul>
         </div>
+        <div class="footer-form">
+          <p class="footer-description-right">Subscribe</p>
+          <form class="subscribe-form">
+            <label class="subscribe-form-field">
+              <input
+                type="email"
+                name="user_email"
+                class="subscribe-form-input"
+                placeholder="E-mail"
+                required
+              />
+            </label>
+            <button type="submit" class="subscribe-form-btn">
+              Subscribe
+              <svg class="subscribe-btn-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
     <!-- MODAL -->
@@ -461,8 +481,8 @@
                 name="user_phone"
                 class="modal-form-input"
                 required
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
-                title="xxx-xxx-xx-xx"
+                pattern="[0-9]{10}"
+                title="xxxxxxxxxx"
               />
               <svg class="form-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-phone"></use>
@@ -491,19 +511,25 @@
               placeholder="Text input"
             ></textarea>
           </label>
-          <input
-            id="user-policy"
-            type="checkbox"
-            name="user_policy"
-            class="modal-form-check visually-hidden"
-          />
-          <label for="user-policy" class="modal-form-check-description"
-            >I accept the terms and conditions of the&nbsp;<a
-              href=""
-              class="privacy-policy"
-              >Privacy Policy</a
-            ></label
-          >
+          <div class="user-policy-wrapper">
+            <input
+              id="user-policy"
+              type="checkbox"
+              name="user_policy"
+              class="modal-form-check visually-hidden"
+              required
+            />
+            <svg class="form-check-icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-click"></use>
+            </svg>
+            <label for="user-policy" class="modal-form-check-description"
+              >I accept the terms and conditions of the&nbsp;<a
+                href=""
+                class="privacy-policy"
+                >Privacy Policy</a
+              ></label
+            >
+          </div>
           <button type="submit" class="modal-form-submit">Send</button>
         </form>
       </div>
